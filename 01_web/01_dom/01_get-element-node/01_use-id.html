@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<>, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /*css로 스크립트를 읽음*/
+        .area{
+            width:100px;
+            height: 100px;
+            border-style:solid;
+            border-color: lightgrey;
+            border-width: 1px;
+            margin: 10 30;
+            /*border-style:*/
+
+            border: 1px solid lightgray;
+        }
+    </style>
+</head>
+<body>
+    <h1>01.id를 이용한 노드 취득</h1>
+    <pre>
+        <b>Document.prototype.getElementBy Id 메서드는 인수로 전달한 id 어트리뷰트 갑승ㄹ 갖는 하나의 요소 노드를 탐새강여 반환한다.</b>
+        문서 냉이 중복 된 id 값 갖는 html 요소가 여러 개 존재하더라도 에러가 발생하지는 않지만 해당 id 값을 갖는 첫 번째 요소 노드만 반환한다.
+    </pre>
+
+    <div id="areal" class="area">
+        div 영역
+        <p id="area2">p 영역</p>
+    </div>
+    <input type="range" min="100" max="300" id ="range"/>
+    <div> id="area1" class="area">
+        div 영역
+     </div>
+
+    <script type="text/javascript">
+        const $elem = document.getElementById("area1");
+        $elem.syyle.backgroundColor = 'blue';
+        console.log($elem)
+
+        function test(){
+            const $range = document.getElementById('range');
+            console.log($range.value)
+
+            $elem.style.width= $range.value+'px';
+        }
+       /* $('#range')*/
+
+    </script>
+</body>
+</html>
